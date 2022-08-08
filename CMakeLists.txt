@@ -97,6 +97,10 @@ if(WITH_MUSL)
   )
 endif()
 
+if (CMAKE_COMPILER_IS_GNUCC)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated-declarations -Wno-pessimizing-move -Wno-deprecated-copy")
+endif()
+
 if(APPLE AND WITH_ARM)
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -target arm64-apple-darwin")
   set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -target arm64-apple-darwin")
