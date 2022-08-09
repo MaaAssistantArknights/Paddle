@@ -215,7 +215,7 @@ FUNCTION(build_protobuf TARGET_NAME BUILD_FOR_HOST)
     else()
         SET(PROTOBUF_REPOSITORY  ${GIT_URL}/protocolbuffers/protobuf.git)
         # Make sure "const FieldDescriptorCompare" has been fixed
-        SET(PROTOBUF_TAG         01a05a53f40ca2ac5f0af10c6cc0810bee39b792)
+        SET(PROTOBUF_TAG         c9869dc7803eb0a21d7e589c40ff4f9288cd34ae)
     endif()
 
     ExternalProject_Add(
